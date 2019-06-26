@@ -1,0 +1,23 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+	<p>{{ titulo }}</p>
+	<p>{{ saudacao() }}</p>
+</div>
+
+
+<script>
+	new Vue({
+		el: "#app", //elemento
+		data:{ 		//data é um objeto que possui os seguintes atributos:
+			titulo: "Usando VueJS"
+			//metodos não podem ter o mesmo nome que dados
+		},
+		methods:{//methods é outra propriedade, que nem data
+			saudacao: function(){//saudacao é outro metodo //é igual a 'saudacao()'
+				console.log(this)
+				return this.titulo
+			}
+		}
+	})
+</script>

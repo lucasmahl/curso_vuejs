@@ -1,0 +1,32 @@
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<div id="app">
+  <span>Altura: </span>
+  <input type="number" v-model="altura">
+  <br/> 
+  <br/>
+  <span>Peso: </span>
+  <input type="number" v-model="peso">
+  <hr>
+  
+  <button @click="calc">CALCULAR IMC</button>
+    <p>IMC: {{imc}}</p>
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    altura: 0,
+    peso: 0,
+    imc: 0,
+  },
+  methods:{
+    calc(){
+      this.imc = (this.peso/(this.altura*this.altura))
+      this.imc = parseFloat(this.imc.toFixed(2))
+      return this.imc
+    }
+  }
+})
+</script>

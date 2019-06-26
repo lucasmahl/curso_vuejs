@@ -1,0 +1,21 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+	<p>{{ titulo }}</p>
+	<p>{{ saudacao() }}</p>
+</div>
+
+
+<script>
+	new Vue({
+		el: "#app", //elemento
+		data:{ 		//data é um objeto que possui os seguintes atributos
+			titulo: "Usando VueJS"
+		},
+		methods:{//methods é outra propriedade
+			saudacao: function(){//saudacao é outro metodo //é igual a 'saudacao()'
+				return 'Boa semana'
+			}
+		}
+	})
+</script>

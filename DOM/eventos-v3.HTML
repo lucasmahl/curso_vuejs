@@ -1,0 +1,29 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+	<p>_{{ contador }}_</p>
+	<button v-on:click="somar(5,$event)">Somar</button>
+	<p v-on:mousemove="atualizarXY">Mouse: X: {{x}} e Y: {{y}}</p>
+</div>
+
+<script>
+	new Vue({
+		el: "#app", //elemento
+		data:{ 		//data é um objeto que possui os seguintes atributos
+			contador: 0,
+			x: 0,
+			y: 0
+		},
+		methods:{
+			somar(passo,ev){
+				console.log(ev)
+				this.contador+=passo
+			},
+			atualizarXY(e){
+				console.log(e)
+				this.x = event.clientX
+				this.y = event.clientY
+			}
+		}
+	})
+</script>

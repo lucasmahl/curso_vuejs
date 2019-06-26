@@ -1,0 +1,27 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+	<p v-once>{{ titulo }}</p> <!-- não muda -->
+	<p>{{ saudacao() }}</p>
+	<a v-bind:href="link">GOOGLE</a><!--binding faz a ligação da view instance com atributo da tag dentro do template -->
+	</br>
+	<p v-html="linkHtml"></p>
+</div>
+
+
+<script>
+	new Vue({
+		el: "#app", 
+		data:{ 		
+			titulo: "Usando VueJS",
+			link: 'http://www.google.com',//tem q ter http:// 
+			linkHtml: '<a href="http://www.google.com">Google</a>'
+		},
+		methods:{
+			saudacao: function(){
+				this.titulo = 'Bom dia'
+				return this.titulo
+			}
+		}
+	})
+</script>
