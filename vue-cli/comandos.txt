@@ -1,0 +1,11 @@
+-- instalar vue 'na pasta'
+npm i -g @vue/cli
+
+--criar projeto
+vue create projeto-simples
+
+--para rodar a aplicacao
+npm run serve
+
+--To create a production build run
+npm run build.

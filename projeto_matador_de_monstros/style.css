@@ -48,3 +48,90 @@ html{
 .life-bar .life.danger{
 	background-color: red;
 }
+
+/*RESULTADO*/
+
+.result{
+	display: flex;
+	justify-content: center;
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+
+.result .win{
+	color: green;
+}
+
+.result .lose{
+	color: red;
+}
+
+/* BOTÕES - CONTROLES DO JOGO*/
+.buttons{
+	display: flex;
+	justify-content: center;
+}
+
+.btn{
+	padding: 5px 10px;/*vertical e horizontal*/
+	margin: 0px 10px;
+	border-radius: 5px;
+	text-transform: uppercase; /* tudo maiusculo */
+	font-size: 1.1rem;
+}
+
+.new-game{
+	background-color: #4253af;
+	color: white;
+}
+
+.attack{
+	background-color: red;
+	color: white;
+}
+
+.especial-attack{
+	background-color: orange;
+	color: black;
+}
+
+.heal{
+	background-color: lightgreen;
+	color: white;
+}
+
+.give-up{
+	background-color: lightgray;
+	color: black;
+}
+
+/* AREA DOS LOGS */
+
+.logs ul{
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.logs ul li{
+	display: flex;
+	justify-content: center;
+	margin: 4px 0px;
+	padding: 3px 0px;
+	font-size: 1.1rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	border-radius: 3px;
+}
+
+.player{
+	background-color: darkblue;
+	color: white;
+}
+
+.monster{
+	background-color: darkred;
+	color: white;
+}

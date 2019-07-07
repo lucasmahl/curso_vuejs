@@ -1,0 +1,26 @@
+<title>aula-75</title>
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+	{{titulo}}
+	<button @click="alterar">ALTERAR</button>
+</div>
+
+
+<script>
+	const vm = new Vue({
+		el: '#app',
+		data:{
+			titulo: 'Teste 1'
+		},
+		methods:{
+			alterar(){
+				this.titulo += '!'
+			}
+		}
+	})
+
+	
+
+</script>

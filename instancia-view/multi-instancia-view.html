@@ -1,0 +1,38 @@
+<title>aula-71</title>
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app1">
+	{{titulo1}} - {{titulo2}}
+	<button @click="alterar">ALTERAR</button>
+</div>
+
+<div id="app2">
+	{{titulo1}} - {{titulo2}}	
+	<button @click="alterar">ALTERAR</button>
+</div>
+
+<script>
+	new Vue({
+		el: '#app1',
+		data:{
+			titulo1: 'Teste 1'
+		},
+		methods:{
+			alterar(){
+				this.titulo1 += '!!!'
+			}
+		}
+	})
+	new Vue({
+		el: '#app2',
+		data:{
+			titulo2: 'Teste 2'
+		},
+		methods:{
+			alterar(){
+				this.titulo2 += '????'
+			}
+		}
+	})
+</script>

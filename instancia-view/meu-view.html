@@ -1,0 +1,48 @@
+<title>aula-74</title>
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+	<p>{{nome}}</p>
+	<p>{{sobrenome}}</p>
+	<p>{{1+1}}</p>	
+</div>
+
+<script>
+	
+	function MeuVue(params){
+		this.$el = document.querySelector(params.el)
+		this.$data = params.data
+
+		for(let atr in this.$data){
+			Object.defineProperty(this, atr, {
+				get:()=>{
+					return this.$data[atr]
+				},
+				set:value=>{
+					this.$data[atr] = value
+				}
+			})
+		}
+		//interpolação
+		const regex 
+		//falou...
+	}
+
+	const vm = new MeuVue({
+		el: '#app',
+		data:{
+			nome: 'Maria',
+			sobrenome: 'Silva'
+		}
+	})
+
+	console.log(vm.nome)
+	console.log(vm.sobrenome)
+	console.log(vm.$data.nome)
+	console.log(vm.$data.sobrenome)
+
+	vm.nome = 'Pedro'
+	console.log(vm.nome)
+
+</script>

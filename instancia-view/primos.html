@@ -1,0 +1,33 @@
+<title>Números primos</title>
+<meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<div id="app">
+  <button @click="mostrar" v-if="mostra">Click</button>
+  <template v-else>
+    <ul>
+      <li v-for="(num, indice) in primos">Indíce: {{indice+1}}. Número: {{num}}</li>
+    </ul>
+  </template>
+</div>
+
+<script>
+    const vm = new Vue({
+      el: '#app',
+      data:{
+        mostra: true,
+        primos: [2,3,5,7]
+
+      },
+      methods:{
+        mostrar(){
+          this.mostra = false
+          for (var i = 8; i <= 100; i++) {
+            if (i%2!=0 && i%3!=0 && i%5!=0 && i%7!=0) {
+              vm.primos.push(i)
+            }
+          }
+        }
+      }
+    })
+</script>
